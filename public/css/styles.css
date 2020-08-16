@@ -56,7 +56,7 @@ form {
   margin-left: 20px;
 }
 
-button {
+.button {
   min-height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -67,6 +67,37 @@ button {
   padding-bottom: 5px;
   border-width: 0;
 }
+
+
+
+.refresh-btn{
+  min-height: 40px;
+  width: 80px;
+  border-color: transparent;
+  background-color: #e09035;
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 3px;
+  border-width: 0;
+  border-radius: 8%;
+  margin-left: 40%;
+  margin-right: 40%;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 input[type="text"] {
   text-align: center;

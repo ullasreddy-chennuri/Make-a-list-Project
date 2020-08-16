@@ -20,7 +20,10 @@
             <% } %>
             <form class="item" action="/" method="POST">
                 <input type="text" name="newItem" placeholder="New Task" autocomplete="off">
-                <button type="submit" name="button">+</button>
+                <button  class="button" type="submit" name="button">+</button>
+            </form>
+            <form class="item" action="/refresh" method="POST">
+                <button class="refresh-btn" type="submit" name="reset">Reset</button>
             </form>
     </div>   
 </body>
