@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO-DO LIST</title>
+    <title>Make a List</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
     <div class="box" id="heading">
-        <h1> <%= kindOfDay %></h1>
+        <h1>Make List of Things To Do!! <br> <%= kindOfDay %></h1>
     </div>
     
     <div class="box">
@@ -25,6 +26,10 @@
             <form class="item" action="/refresh" method="POST">
                 <button class="refresh-btn" type="submit" name="reset">Reset</button>
             </form>
-    </div>   
+    </div>
+    <footer>
+        <li>Once done with your task, activate the checkbox.</li>
+        <li>After completing all the tasks or to prepare list from the beginning smash reset button.</li>
+    </footer>
 </body>
 </html>
