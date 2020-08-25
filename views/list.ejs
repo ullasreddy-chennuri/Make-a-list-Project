@@ -13,19 +13,30 @@
     </div>
     
     <div class="box">
-        <% for(let i=0;i<newListItems.length;i++){ %>
-            <div class="item">
-                <input type="checkbox">
-                <p> <%= newListItems[i] %> </p>
-            </div>
-            <% } %>
+        
+            <% newListItems.forEach(function(item) { %> 
+                <form action="/delete" method="POST">
+                <div class="item">
+                    <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+                    <p> <%= item.name %> </p>
+                </div>
+                <input type="hidden" name="listName" value="<%= kindOfDay %>"></input>
+                </form>
+            <% }); %>
+
+
+
             <form class="item" action="/" method="POST">
                 <input type="text" name="newItem" placeholder="New Task" autocomplete="off">
-                <button  class="button" type="submit" name="button">+</button>
+                <button  class="button" type="submit" name="list" value="<%=kindOfDay %>" >+</button>
             </form>
-            <form class="item" action="/refresh" method="POST">
+
+
+
+
+            <!-- <form class="item" action="/refresh" method="POST">
                 <button class="refresh-btn" type="submit" name="reset">Reset</button>
-            </form>
+            </form> -->
     </div>
     <footer>
         <li>Once done with your task, activate the checkbox.</li>
